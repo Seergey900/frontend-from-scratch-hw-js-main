@@ -8,4 +8,3 @@ while(i<=20) {
 }
 console.log(sum)
 // your code
-let sum
