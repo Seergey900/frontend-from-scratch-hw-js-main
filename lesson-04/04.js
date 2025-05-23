@@ -1,15 +1,14 @@
 /*
-Напишите функцию `doubleEachCharacter`, которая принимает строку и возвращает новую строку, где каждый символ из исходной строки повторяется дважды.
+function doubleEachCharacter(str) {
+  let result = ''; // сюда будем собирать новую строку
 
-Входные данные:
+  for (let i = 0; i < str.length; i++) {
+    let currentChar = str[i];  // берём текущий символ
+    result += currentChar + currentChar; // добавляем его два раза в result
+  }
 
-- **`str`**: Строка, символы которой нужно удвоить.
+  return result; // возвращаем новую строку
+}
 
-Выходные данные:
-
-- Новая строка с каждым символом, повторенным дважды.
-
-Пример работы функции: `doubleEachCharacter('hello')` вернёт `'hheelllloo'`
-*/
-
-function doubleEachCharacter() {}
+// Пример:
+console.log(doubleEachCharacter('hello')); // выведет 'hheelllloo'
