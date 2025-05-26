@@ -1,5 +1,5 @@
-const isAdmin = false;
-const isVerifiedUser = true;
+cconst isAdmin = true;
+const isVerifiedUser = false;
 const hasSpecialPermission = true;
 const hasTemporaryPass = false;
 
