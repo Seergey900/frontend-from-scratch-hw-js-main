@@ -1,4 +1,5 @@
 let grade;
+let score;
 
 if (score >= 90 && score <= 100) {
     grade = 'A';
