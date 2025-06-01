@@ -1,13 +1,17 @@
-/*
-function includesElement(array, element) {
-  for (let i = 0; i < array.length; i++) {          // перебираем каждый элемент массива
-    if (array[i] === element) {                      // если текущий элемент равен тому, что ищем
-      return true;                                   // сразу возвращаем true
+function findCommonElements(array1, array2) {
+    // Создаем множество из второго массива для быстрого поиска
+    const set2 = new Set(array2);
+    const commonSet = new Set();
+
+    for (const element of array1) {
+        if (set2.has(element)) {
+            commonSet.add(element); // добавляем в множество общих элементов
+        }
     }
-  }
-  return false;                                     // если дошли сюда — элемент не найден, возвращаем false
+
+    // Преобразуем множество обратно в массив и возвращаем
+    return Array.from(commonSet);
 }
 
-// Примеры:
-console.log(includesElement([1, 2, 3], 2));        // выведет true — 2 есть в массиве
-console.log(includesElement(['a', 'b', 'c'], 'd')); // выведет false — 'd' нет в массиве
+// Пример использования:
+console.log(findCommonElements([1, 2, 3], [2, 3, 4])); // [2, 3]
