@@ -14,4 +14,4 @@ function findCommonElements(array1, array2) {
 }
 
 // Пример использования:
-console.log(findCommonElements([1, 2, 3], [2, 3, 4])); // [2, 3]
+console.log(findCommonElements([1, 2, 3], [2, 3, 4])); // выведет [2, 3]
