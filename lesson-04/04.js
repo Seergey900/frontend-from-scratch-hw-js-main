@@ -1,14 +1,12 @@
-/*
 function doubleEachCharacter(str) {
-  let result = ''; // сюда будем собирать новую строку
+    let result = '';
 
-  for (let i = 0; i < str.length; i++) {
-    let currentChar = str[i];  // берём текущий символ
-    result += currentChar + currentChar; // добавляем его два раза в result
-  }
+    for (let i = 0; i < str.length; i++) {
+        result += str[i] + str[i]; // добавляем символ дважды
+    }
 
-  return result; // возвращаем новую строку
+    return result;
 }
 
-// Пример:
-console.log(doubleEachCharacter('hello')); // выведет 'hheelllloo'
+// Пример использования:
+console.log(doubleEachCharacter('hello')); // 'hheelllloo'
