@@ -1,19 +1,17 @@
 function findCommonElements(array1, array2) {
-    let commonArray = []; // сюда будем складывать общие элементы
+    // Создаем множество из второго массива для быстрого поиска
+    const set2 = new Set(array2);
+    const commonSet = new Set();
 
-    for (let i = 0; i < array1.length; i++) {
-        let element = array1[i];
-
-        // Проверяем, есть ли элемент из array1 в array2
-        // И одновременно проверяем, что элемент ещё не добавлен в commonArray,
-        // чтобы избежать повторов в результирующем массиве
-        if (array2.includes(element) && !commonArray.includes(element)) {
-            commonArray.push(element); // добавляем общий элемент
+    for (const element of array1) {
+        if (set2.has(element)) {
+            commonSet.add(element); // добавляем в множество общих элементов
         }
     }
 
-    return commonArray; // возвращаем массив с общими элементами
+    // Преобразуем множество обратно в массив и возвращаем
+    return Array.from(commonSet);
 }
 
 // Пример использования:
-console.log(findCommonElements([1, 2, 3], [2, 3, 4])); // выведет [2, 3]
+console.log(findCommonElements([1, 2, 3], [2, 3, 4])); // [2, 3]
