@@ -1,20 +1,18 @@
-/*
-Напишите функцию `findCommonElements`, которая принимает два массива и возвращает массив, содержащий общие элементы из обоих массивов.
+function findCommonElements(array1, array2) {
+    let commonArray = []; // сюда складываем общие элементы
 
-Входные данные:
+    for (let i = 0; i < array1.length; i++) {
+        let element = array1[i];
 
-- `array1`: Первый массив, содержащий любые типы данных.
-- `array2`: Второй массив, содержащий любые типы данных.
+        // проверяем, есть ли элемент из array1 в array2
+        // и при этом его еще нет в commonArray, чтобы не было дубликатов
+        if (includesElement(array2, element) && !includesElement(commonArray, element)) {
+            commonArray.push(element);
+        }
+    }
 
-Выходные данные:
+    return commonArray;
+}
 
-- Массив, содержащий элементы, которые присутствуют в обоих исходных массивах.
-- Если общих элементов нет, должен вернуться пустой массив
-
-Пример использования:
-findCommonElements([1, 2, 3], [2, 3, 4]) // [2, 3]
-
-Подсказка: можно использовать функцию `includesElement`, которую мы написали ранее. Переписывать её не нужно, она доступна по всему проекту за счёт hoisting.
-*/
-
-function findCommonElements() {}
+// Пример использования:
+console.log(findCommonElements([1, 2, 3], [2, 3, 4])); // выведет [2, 3]
