@@ -3,7 +3,7 @@
 * Полученное булево значение сохраните в переменной isAccess.
 */
 
-const isAdmin = false;
+const isAdmin = false;121212243435
 const isVerifiedUser = true;
 const hasSpecialPermission = true;
 const hasTemporaryPass = false;
