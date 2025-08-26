@@ -37,5 +37,3 @@ const gallery = {
 
 function updateGallery() {}
 
-console.log('hi')
-
